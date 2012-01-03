@@ -9,4 +9,4 @@ TODOs
 -----
 
 * Instead of constantly querying for new Google+ posts / changes on the site find a way to be notified of changes
-* Configuration options: Show/hide comments, color
+* Configuration options: Show/hide comments, color, HTML5 player

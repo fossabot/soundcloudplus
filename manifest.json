@@ -1,6 +1,6 @@
 {
     "name": "SoundCloud+",
-    "version": "0.2",
+    "version": "0.3",
     "description": "Embeds SoundCloud player below links to SoundCloud tracks on Google+",
     "content_scripts": [
         {
