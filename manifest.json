@@ -1,0 +1,20 @@
+{
+    "name": "SoundCloud+",
+    "version": "0.1",
+    "description": "Embeds SoundCloud player below links to SoundCloud tracks on Google+",
+    "content_scripts": [
+        {
+            "matches": ["*://plus.google.com/*"],
+            "js": ["js/lib/jquery-1.7.1.min.js", "js/soundcloud+.js"]
+        }
+    ],
+    "permissions": [
+        "*://soundcloud.com/*"
+    ],
+    "default_locale": "en",
+    "icons": {
+         "16": "img/icon16.png",
+         "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    }
+}
