@@ -25,10 +25,10 @@
 
         $links.each(function(index, item) {
             var $item = $(item),
-                $a = $item.find("a[href^='http://soundcloud.com/']");
+                $a = $item.find("a[href^='http://soundcloud.com/'], a[href^='http://m.soundcloud.com/']");
 
             if ($a.size() === 1) {
-                var url = $a.attr("href");
+                var url = $a.attr("href").replace(/m\.soundcloud\.com/g, "soundcloud.com");
 
                 // Only add player if we haven't already added it
                 if ($item.siblings("." + MARKER_CLASSNAME).size() === 0) {
