@@ -1,7 +1,7 @@
 SoundCloud+
 ===========
 
-SoundCloud+ is a Google Chrome extension that improves the
+SoundCloud+ is a Google Chrome extension that improves
 [SoundCloud](http://soundcloud.com/) integration on
 [Google+](https://plus.google.com/) by embedding the SoundCloud player below links
 to SoundCloud tracks.
