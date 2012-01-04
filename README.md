@@ -6,7 +6,7 @@ SoundCloud+ is a Google Chrome extension that improves the
 [Google+](https://plus.google.com/) by embedding the SoundCloud player below links
 to SoundCloud tracks.
 
-![Example screenshot](/resources/screenshot.png "SoundCloud+ in action")
+![Example screenshot](https://github.com/svenjacobs/SoundCloudPlus/raw/master/resources/screenshot.png "SoundCloud+ in action")
 
 TODOs
 -----
