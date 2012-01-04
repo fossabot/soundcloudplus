@@ -72,8 +72,39 @@
     };
 
 
+
+    function Html5TrackPlayer(id) {
+        this.id = id;
+        this.height = 166;
+        this.showArtwork = false;
+        this.html = "<iframe width='100%' height='[[HEIGHT]]' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F[[ID]]&amp;auto_play=[[AUTOPLAY]]&amp;show_artwork=[[SHOW_ARTWORK]]&amp;color=[[COLOR]]'></iframe>";
+    }
+
+    Html5TrackPlayer.prototype = new DefaultTrackPlayer();
+    Html5TrackPlayer.prototype.constructor = Html5TrackPlayer;
+
+    Html5TrackPlayer.prototype.buildProperties = function() {
+        var props = DefaultTrackPlayer.prototype.buildProperties.call(this);
+        props.SHOW_ARTWORK = this.showArtwork;
+        return props;
+    };
+
+
+
+    function Html5PlaylistPlayer(id) {
+        this.id = id;
+        this.height = 450;
+        this.html = "<iframe width='100%' height='[[HEIGHT]]' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F[[ID]]&amp;auto_play=[[AUTOPLAY]]&amp;show_artwork=[[SHOW_ARTWORK]]&amp;color=[[COLOR]]'></iframe>";
+    }
+
+    Html5PlaylistPlayer.prototype = new DefaultPlaylistPlayer();
+    Html5PlaylistPlayer.prototype.constructor = Html5PlaylistPlayer;
+
+
     // exports
     window.DefaultTrackPlayer = DefaultTrackPlayer;
     window.DefaultPlaylistPlayer = DefaultPlaylistPlayer;
+    window.Html5TrackPlayer = Html5TrackPlayer;
+    window.Html5PlaylistPlayer = Html5PlaylistPlayer;
 
 }());
