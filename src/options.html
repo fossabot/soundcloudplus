@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SoundCloud+ options</title>
+        <link rel="stylesheet" type="text/css" href="css/options.css"/>
+    </head>
+    <body>
+        <header>
+            <img src="img/icon48.png" alt="Icon" />
+            <h1>SoundCloud+ options</h1>
+        </header>
+
+        <div class="option">
+            <label for="playerType">Player type</label>
+            <select id="playerType" data-default="html5">
+                <option value="html5">HTML5</option>
+                <option value="flash">Flash</option>
+            </select>
+        </div>
+
+        <div class="option">
+            <label for="color">Color</label>
+            <input id="color" type="text" data-default="ff7700"/>
+        </div>
+
+        <div class="option">
+            <label for="showComments">Show comments</label>
+            <input id="showComments" type="checkbox" data-default="true"/>
+        </div>
+
+        <button id="reset">Reset</button>
+
+        <footer>
+            Some options may not have an effect on certain types of players (HTML5, Flash, Track, Playlist).<br/>
+            Reload Google+ page for changes to take effect immediately.
+        </footer>
+
+        <script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/options.js"></script>
+    </body>
+</html>

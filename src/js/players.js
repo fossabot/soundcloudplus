@@ -1,6 +1,6 @@
 /*jslint browser: true, white: true*/
 (function() {
-    'use strict';
+    "use strict";
 
     function BasePlayer() {
         this.id = 0;
@@ -73,21 +73,28 @@
 
 
 
-    function Html5TrackPlayer(id) {
-        this.id = id;
-        this.height = 166;
+    function BaseHtml5Player() {
         this.showArtwork = false;
-        this.html = "<iframe width='100%' height='[[HEIGHT]]' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F[[ID]]&amp;auto_play=[[AUTOPLAY]]&amp;show_artwork=[[SHOW_ARTWORK]]&amp;color=[[COLOR]]'></iframe>";
     }
 
-    Html5TrackPlayer.prototype = new DefaultTrackPlayer();
-    Html5TrackPlayer.prototype.constructor = Html5TrackPlayer;
+    BaseHtml5Player.prototype = new BasePlayer();
+    BaseHtml5Player.prototype.constructor = BaseHtml5Player;
 
-    Html5TrackPlayer.prototype.buildProperties = function() {
-        var props = DefaultTrackPlayer.prototype.buildProperties.call(this);
+    BaseHtml5Player.prototype.buildProperties = function() {
+        var props = BasePlayer.prototype.buildProperties.call(this);
         props.SHOW_ARTWORK = this.showArtwork;
         return props;
     };
+
+
+    function Html5TrackPlayer(id) {
+        this.id = id;
+        this.height = 166;
+        this.html = "<iframe width='100%' height='[[HEIGHT]]' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F[[ID]]&amp;auto_play=[[AUTOPLAY]]&amp;show_artwork=[[SHOW_ARTWORK]]&amp;color=[[COLOR]]'></iframe>";
+    }
+
+    Html5TrackPlayer.prototype = new BaseHtml5Player();
+    Html5TrackPlayer.prototype.constructor = Html5TrackPlayer;
 
 
 
@@ -97,7 +104,7 @@
         this.html = "<iframe width='100%' height='[[HEIGHT]]' scrolling='no' frameborder='no' src='http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F[[ID]]&amp;auto_play=[[AUTOPLAY]]&amp;show_artwork=[[SHOW_ARTWORK]]&amp;color=[[COLOR]]'></iframe>";
     }
 
-    Html5PlaylistPlayer.prototype = new DefaultPlaylistPlayer();
+    Html5PlaylistPlayer.prototype = new BaseHtml5Player();
     Html5PlaylistPlayer.prototype.constructor = Html5PlaylistPlayer;
 
 

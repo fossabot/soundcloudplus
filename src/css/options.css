@@ -1,0 +1,31 @@
+@import "common.css";
+
+header {
+    height: 48px;
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+header h1 {
+    font-size: large;
+    line-height: 48px;
+    margin: 0 0 0 0.5em;
+}
+
+header img {
+    width: 48px;
+    height: 48px;
+}
+
+header h1, header img {
+    float: left;
+}
+
+footer {
+    font-size: small;
+    margin-top: 1em;
+}
+
+div.option {
+    margin-bottom: 0.5em;
+}
