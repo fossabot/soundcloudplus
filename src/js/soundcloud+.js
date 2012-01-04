@@ -35,10 +35,10 @@
                 if (cache[url] !== null && $item.siblings("." + MARKER_CLASSNAME).size() === 0) {
 
                     var addPlayer = function(type, id) {
-                        var height = (type === "tracks" ? 81 : 150);
-
                         console.debug("Adding player for SoundCloud link " + url);
-                        $item.after($("<div>").addClass(MARKER_CLASSNAME).append("<object height='" + height + "' width='100%'><param name='movie' value='https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2F" + type + "%2F" + id + "&amp;show_comments=true&amp;auto_play=false&amp;show_artwork=false&amp;color=ff7700'></param><param name='allowscriptaccess' value='always'></param><param name='wmode' value='transparent'></param><embed allowscriptaccess='always' height='" + height + "' src='https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2F" + type + "%2F" + id + "&amp;show_comments=true&amp;auto_play=false&amp;show_artwork=false&amp;color=ff7700' type='application/x-shockwave-flash' width='100%' wmode='transparent'></embed></object>"));
+                        
+                        var player = (type === "tracks" ? new DefaultTrackPlayer(id) : new DefaultPlaylistPlayer(id));
+                        $item.after($("<div>").addClass(MARKER_CLASSNAME).append(player.getHtml()));
                     };
 
                     if (cache[url] === undefined) {
