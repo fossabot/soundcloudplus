@@ -7,7 +7,7 @@
     "content_scripts": [
         {
             "matches": ["*://plus.google.com/*"],
-            "js": ["js/lib/jquery-1.7.1.min.js", "js/players.js", "js/soundcloud+.js"]
+            "js": ["js/lib/jquery-1.7.1.min.js", "js/soundcloud+.js"]
         }
     ],
     "permissions": [
