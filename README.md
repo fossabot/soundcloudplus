@@ -11,9 +11,7 @@ to SoundCloud tracks.
 TODOs
 -----
 
-* Instead of constantly querying for new Google+ posts / changes on the site find a way to be notified of changes
 * Beautify configuration page
-* Support SoundCloud short URL (snd.sc)
 
 License
 -------

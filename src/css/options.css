@@ -26,6 +26,11 @@ footer {
     margin-top: 1em;
 }
 
+footer hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 div.option {
     margin-bottom: 0.5em;
 }

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.4 (01/05/12)
+--------------
+
+* Improved algorithm
+* Added options page
+* Added support for snd.sc short URLs
+
 0.3 (01/04/12)
 --------------
 
