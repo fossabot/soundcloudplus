@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.4.1 (01/27/12)
+----------------
+
+* Minor adjustments because of Google+ changes
+
 0.4 (01/05/12)
 --------------
 
