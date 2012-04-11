@@ -33,7 +33,7 @@
                 return;
             }
 
-            var $links = $('.s-r-za');
+            var $links = $('.ICACWc');
 
             $links.each(function(index, item) {
                 var $item = $(item),
@@ -43,18 +43,19 @@
                     url,
                     addPlayer;
 
-                if ($a.size() === 1) {
+                if ($a.size() > 0) {
                     url = 'http://' + REGEX.exec($a.attr('href'))[1];
 
                     // Only add player if we haven't already added it
                     // or if there wasn't a previous error when retrieving the id for that url
-                    if (cache[url] !== null && $item.parent().siblings('.' + MARKER_CLASSNAME).size() === 0) {
+                    if (cache[url] !== null && !$item.hasClass(MARKER_CLASSNAME)) {
 
                         addPlayer = function(html) {
                             console.debug('Adding player for SoundCloud link ' + url);
                             var $html = $(html);
                             $html.filter('object').attr('wmode', 'opaque');
-                            $item.parent().after($('<div>').addClass(MARKER_CLASSNAME).append($html));
+                            $item.empty();
+                            $item.addClass(MARKER_CLASSNAME).append($html);
                         };
 
                         if (cache[url] === undefined) {

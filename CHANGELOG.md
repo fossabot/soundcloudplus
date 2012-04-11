@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.4.2 (04/11/12)
+----------------
+
+* Adjustments to new major Google+ design
+
 0.4.1 (01/27/12)
 ----------------
 
