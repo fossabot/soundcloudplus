@@ -33,7 +33,7 @@
                 return;
             }
 
-            var $links = $('.ICACWc');
+            var $links = $('.Ry');
 
             $links.each(function(index, item) {
                 var $item = $(item),
@@ -65,7 +65,7 @@
                                     console.error('Couldn\'t determine embed for ' + url);
                                 }
                                 // getEmbed() may be a time consuming process so here we make sure again that the player hasn't been added already
-                                else if ($item.parent().siblings('.' + MARKER_CLASSNAME).size() === 0) {
+                                else if (!$item.hasClass(MARKER_CLASSNAME)) {
                                     cache[url] = html;
                                     addPlayer(html);
                                 }
