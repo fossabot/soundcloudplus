@@ -1,4 +1,4 @@
-<script type="text/javascript">
+(function () {
     if (!localStorage.color) {
         chrome.tabs.create({url: "options.html"});
     }
@@ -10,4 +10,4 @@
           sendResponse({});
         }
     });
-</script>
+}());
